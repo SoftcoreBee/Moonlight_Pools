@@ -1,5 +1,6 @@
 ## Moonlight Pools ##
-<img width="1920" height="1041" alt="MoonlightPools6" src="https://github.com/user-attachments/assets/5db425b5-188c-4370-a7c8-2444af593cc0" />
+<img width="1920" height="1041" alt="MoonlightPools6" src="https://github.com/user-attachments/assets/7bd2f91c-0e5e-4df0-9bac-3e10099e5f39" />
+
 
 This project presents a WebGL2-accelerated implementation of Neural Cellular Automata (NCA), enabling efficient, real-time simulation of cell-based systems governed by learned, rather than hand-coded, local update rules. A compact neural network operates at each grid cell, processing the local neighborhood and iteratively updating cell states based on its parameters. Utilizing WebGL2 for parallel computation on the GPU, the system can evolve complex, emergent spatiotemporal patterns at interactive frame rates within the browser environment. This approach demonstrates how neural networks can generalize and extend traditional cellular automata frameworks, providing a flexible platform for studying pattern formation, morphogenesis, and artificial life in a technically accessible way.
 
@@ -36,7 +37,8 @@ The 3×3 convolution kernel positions are indexed as:
 		
 	0(TL) 1(T)  2(TR) 3(L)  4(C)  5(R) 6(BL) 7(B)  8(BR)
 
-<img width="1027" height="864" alt="MoonlightPools5" src="https://github.com/user-attachments/assets/fb762125-f67d-454f-89d6-c56f92c087a7" />
+<img width="1027" height="864" alt="MoonlightPools5" src="https://github.com/user-attachments/assets/310ddfdb-36c4-4cd7-b414-e84a570ea0dd" />
+
 
 ## Control Reference
 
@@ -88,7 +90,8 @@ The 3×3 convolution kernel positions are indexed as:
 - **UNIFORM**: Simple uniform distribution
 - **CUSTOM**: User-defined initialization
 
-<img width="1920" height="1040" alt="MoonlightPools7" src="https://github.com/user-attachments/assets/94f15724-6c21-4fcf-a0e5-f002ab730908" />
+<img width="1920" height="1040" alt="MoonlightPools7" src="https://github.com/user-attachments/assets/40269566-1798-485b-a5e7-c7f4e35e6106" />
+
 
 ### Kernel Manipulation
 
@@ -148,7 +151,8 @@ The 3×3 convolution kernel positions are indexed as:
 - **Function**: Automatically mutates weights at random intervals (30-60 seconds)
 - **Effect**: Continuous evolution without manual intervention
 
-<img width="1019" height="860" alt="MoonlightPools1" src="https://github.com/user-attachments/assets/daae48fc-f090-455e-97c0-f2fab94dbc29" />
+<img width="1019" height="860" alt="MoonlightPools1" src="https://github.com/user-attachments/assets/e54d7a12-4818-45fa-bc6e-c199e813dcb3" />
+
 
 ## Keyboard Shortcuts
 
@@ -160,7 +164,8 @@ The 3×3 convolution kernel positions are indexed as:
 | `M` | Mutate weights |
 | `E` | Toggle auto-evolution |
 
-<img width="1920" height="1001" alt="MoonlightPools8" src="https://github.com/user-attachments/assets/02fb719a-9f53-4197-b7e0-38d67dbff6e0" />
+<img width="1920" height="1001" alt="MoonlightPools8" src="https://github.com/user-attachments/assets/fdd185f7-981d-48ff-b4ba-2af2b6096bf6" />
+
 
 ## Mathematical References
 
