@@ -1,0 +1,320 @@
+/* Calculation Display Styles - Black/White Terminal Theme */
+.calculation-display {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.95);
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    color: #ffffff;
+    min-width: 280px;
+    max-width: 350px;
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    user-select: none;
+}
+
+.calculation-display.collapsed .calc-content {
+    display: none;
+}
+
+.calc-header {
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #ffffff;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.calc-title {
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.calc-toggle {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.calculation-display.collapsed .calc-toggle {
+    transform: rotate(-90deg);
+}
+
+.calc-content {
+    padding: 10px 12px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.calc-section {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.calc-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.calc-label {
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 4px;
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+}
+
+.calc-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.calc-item {
+    font-size: 10px;
+    color: #cccccc;
+    display: flex;
+    justify-content: space-between;
+    padding: 1px 0;
+}
+
+.calc-item .terminal-value {
+    color: #ffffff;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+/* Kernel Matrix Styles - Black/White Theme */
+.kernel-matrix {
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 6px;
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.matrix-row {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+}
+
+.matrix-cell {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #666666;
+    color: #ffffff;
+    font-size: 9px;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    padding: 2px 4px;
+    min-width: 32px;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+}
+
+.matrix-cell.center {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.matrix-cell.active {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: #ffffff;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.calc-note {
+    font-size: 9px;
+    color: #999999;
+    margin-top: 4px;
+    font-style: italic;
+}
+
+/* Animation for updates - Black/White Theme */
+.calc-item.updated .terminal-value {
+    animation: valueUpdateBW 0.5s ease;
+}
+
+@keyframes valueUpdateBW {
+    0% { 
+        color: #ffffff; 
+        text-shadow: 0 0 5px #ffffff;
+        transform: scale(1.1);
+    }
+    100% { 
+        color: #ffffff; 
+        text-shadow: none;
+        transform: scale(1.0);
+    }
+}
+
+.matrix-cell.updated {
+    animation: matrixUpdateBW 0.6s ease;
+}
+
+@keyframes matrixUpdateBW {
+    0% { 
+        background: rgba(255, 255, 255, 0.4);
+        border-color: #ffffff;
+        transform: scale(1.05);
+    }
+    100% { 
+        background: rgba(0, 0, 0, 0.7);
+        border-color: #666666;
+        transform: scale(1.0);
+    }
+}
+
+/* Enhanced styles for controls - Black/White Theme */
+.checkbox-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75em;
+    color: #ffffff;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2px 6px;
+    border: 1px solid #666666;
+    border-radius: 2px;
+}
+
+.checkbox-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin: 0;
+    transform: scale(0.8);
+}
+
+.kernel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    max-width: 140px;
+}
+
+.kernel-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 28px;
+    font-size: 0.6em;
+    border: 1px solid #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.kernel-cell.center {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+    font-weight: bold;
+}
+
+.kernel-cell input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.kernel-cell:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.kernel-cell input[type="checkbox"]:checked ~ * {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.kernel-cell input[type="checkbox"]:not(:checked) ~ * {
+    color: #999999;
+}
+
+/* Visual feedback for checked/unchecked state */
+.kernel-cell input[type="checkbox"]:checked {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.kernel-cell input[type="checkbox"]:checked + span {
+    color: #ffffff !important;
+    text-shadow: 0 0 3px #ffffff;
+}
+
+.kernel-cell input[type="checkbox"]:not(:checked) + span {
+    color: #999999 !important;
+}
+
+.kernel-cell span {
+    pointer-events: none;
+    z-index: 1;
+    position: relative;
+}
+
+/* Ensure controls are properly sized */
+.control-group.terminal-group {
+    min-width: 90px;
+}
+
+.control-label.terminal-label {
+    font-size: 0.7em;
+    white-space: nowrap;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .calculation-display {
+        right: 10px;
+        top: 10px;
+        min-width: 250px;
+        max-width: 280px;
+        font-size: 10px;
+    }
+    
+    .calc-item {
+        font-size: 9px;
+    }
+    
+    .matrix-cell {
+        font-size: 8px;
+        min-width: 28px;
+        padding: 1px 2px;
+    }
+}
